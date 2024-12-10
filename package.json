@@ -1,11 +1,13 @@
 {
   "name": "tron-multisig",
   "version": "1.0.0",
+  "homepage": "https://khanviph.github.io/tron-multisig",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "latest",
@@ -24,5 +26,26 @@
     "autoprefixer": "latest",
     "postcss": "latest",
     "tailwindcss": "latest"
+  },
+  "private": true,
+  "author": "Your Name",
+  "description": "Tron MultiSig Wallet Interface",
+  "keywords": [
+    "tron",
+    "blockchain",
+    "multisig",
+    "wallet",
+    "dapp"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Khanviph/tron-multisig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Khanviph/tron-multisig/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
