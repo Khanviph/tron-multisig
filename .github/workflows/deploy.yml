@@ -3,16 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # 当 master 分支收到推送时触发
+      - master
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build and Export
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build  # 构建输出目录
-          branch: gh-pages  # 部署分支
+          folder: out # Next.js 导出的目录
+          branch: gh-pages
